@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Curricular Interactiva</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      background: #f9f9f9;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #444;
+    }
+    .materia {
+      margin: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      border: 1px solid #ccc;
+    }
+    .materia.aprobada {
+      background: #d4edda;
+      border-color: #9fd39b;
+    }
+    .materia.habilitada {
+      background: #d9ecff;
+      border-color: #91c4ff;
+    }
+    .materia.bloqueada {
+      background: #eeeeee;
+      border-color: #ccc;
+      opacity: 0.6;
+    }
+    @media (max-width: 600px) {
+      .materia {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      #resumen {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular Interactiva</h1>
+
+  <select id="selectorSemestre" style="margin-bottom: 1rem; padding: 0.5rem;">
+    <option disabled selected>Selecciona tu semestre</option>
+    <option value="1">Semestre 1</option>
+    <option value="2">Semestre 2</option>
+    <option value="3">Semestre 3</option>
+    <option value="4">Semestre 4</option>
+    <option value="5">Semestre 5</option>
+    <option value="6">Semestre 6</option>
+    <option value="7">Semestre 7</option>
+    <option value="8">Semestre 8</option>
+    <option value="9">Semestre 9</option>
+    <option value="10">Semestre 10</option>
+    <option value="11">Semestre 11</option>
+    <option value="12">Semestre 12</option>
+  </select>
+
+  <input id="buscador" type="text" placeholder="Buscar materia..." style="width: 100%; padding: 0.5rem; font-size: 1rem; margin-bottom: 1rem;" />
+  <div id="resumen" style="margin-bottom: 1rem; font-size: 1.1rem; font-weight: bold;"></div>
+  <div id="contenedor"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
